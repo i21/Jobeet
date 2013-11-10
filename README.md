@@ -39,7 +39,7 @@ Capitulos
 Otras fuentes útiles para seguir el tutorial:
 ---------
 
-[Memorias de un aprendiz] (http://www.memoriasdeunaprendiz.com/series/jobeet-con-symfony2/)  
+[Memorias de un aprendiz](http://www.memoriasdeunaprendiz.com/series/jobeet-con-symfony2/)  
 Jobeet con symfony 2 (Incompleto: Hasta capitulo 4 / Español)  
 
 [Ens.ro](http://www.ens.ro/2012/03/21/jobeet-tutorial-with-symfony2/)  

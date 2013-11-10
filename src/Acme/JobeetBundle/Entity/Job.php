@@ -2,6 +2,7 @@
 
 namespace Acme\JobeetBundle\Entity;
 
+use Acme\JobeetBundle\Utils\Jobeet as Jobeet;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -498,4 +499,20 @@ class Job
         return sprintf('%s at %s (%s)', $this->getPosition(),
             $this->getCompany(), $this->getLocation());
     }
+
+    public function getCompanySlug()
+    {
+        return Jobeet::slugify($this->getCompany());
+    }
+
+    public function getPositionSlug()
+    {
+        return Jobeet::slugify($this->getPosition());
+    }
+
+    public function getLocationSlug()
+    {
+        return Jobeet::slugify($this->getLocation());
+    }
+
 }
