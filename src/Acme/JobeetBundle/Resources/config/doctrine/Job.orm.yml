@@ -1,0 +1,76 @@
+## src/Acme/JobeetBundle/Resources/config/doctrine/Job.orm.yml
+Acme\JobeetBundle\Entity\Job:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator: 
+                strategy: AUTO
+        type:
+            type: string
+            length: 255
+            nullable: false
+        company:
+            type: string
+            length: 255
+            nullable: false
+        logo:
+            type: string
+            length: 255
+            nullable: true
+        url:
+            type: string
+            length: 255
+            nullable: true
+        position:
+            type: string
+            length: 255
+            nullable: false
+        location:
+            type: string
+            length: 255
+            nullable: false
+        description:
+            type: string
+            nullable: false
+        how_to_apply:
+            type: string
+            nullable: false
+        token:
+            type: string
+            length: 255
+            nullable: false
+        is_public:
+            type: boolean
+            nullable: false
+        is_activated:
+            type: boolean
+            nullable: false
+        email:
+            type: string
+            length: 255
+            nullable: false
+        expires_at:
+            type: datetime
+            nullable: false
+        created_at:
+            type: datetime
+            nullable: true
+        updated_at:
+            type: datetime
+            nullable: true
+    manyToOne:
+        Category:
+            targetEntity: Category
+            mappedBy: category
+            inversedBy: Job
+            joinColumns:
+                category_id:
+                    referencedColumnName: id
+                    nullable: false
+                    onDelete: CASCADE
+    lifecycleCallbacks:
+         prePersist: [ prePersistEvent ]
+         preUpdate: [ preUpdateEvent ]

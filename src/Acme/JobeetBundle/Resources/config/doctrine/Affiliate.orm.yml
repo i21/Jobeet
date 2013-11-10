@@ -1,0 +1,43 @@
+## src/Acme/JobeetBundle/Resources/config/doctrine/Affiliate.orm.yml
+Acme\JobeetBundle\Entity\Affiliate:
+  type: entity
+  table: null
+  fields:
+    id:
+      type: integer
+      id: true
+      generator:
+        strategy: AUTO
+    url:
+      type: string
+      length: 255
+      nullable: false
+    email:
+      type: string
+      unique: true
+      length: 255
+      nullable: false
+    token:
+      type: string
+      length: 255
+      nullable: false
+    is_active:
+      type: string
+      length: 255
+      nullable: false
+    created_at:
+      nullable: true
+  manyToMany:
+    Category:
+      targetEntity: Category
+      inversedBy: Affiliate
+      joinTable:
+        name: CategoryAffiliate
+        joinColumns:
+          affiliate_id:
+            referencedColumnName: id
+            nullable: false
+        inverseJoinColumns:
+          category_id:
+            referencedColumnName: id
+            nullable: false

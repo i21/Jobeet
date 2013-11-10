@@ -1,0 +1,7 @@
+parameters:
+#    acme_jobeet.example.class: Acme\JobeetBundle\Example
+
+services:
+#    acme_jobeet.example:
+#        class: %acme_jobeet.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

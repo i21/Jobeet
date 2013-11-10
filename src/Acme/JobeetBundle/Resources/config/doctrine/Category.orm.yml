@@ -1,0 +1,24 @@
+## src/Acme/JobeetBundle/Resources/config/doctrine/Category.orm.yml
+Acme\JobeetBundle\Entity\Category:
+  type: entity
+  table: null
+  fields:
+    id:
+      type: integer
+      id: true
+      generator:
+        strategy: AUTO
+
+    name:
+      type: string
+      unique: true
+      length: 255
+      nullable: false
+  oneToMany:
+    Job:
+      targetEntity: Job
+      mappedBy: Category
+  manyToMany:
+    Affiliate:
+      targetEntity: Affiliate
+      mappedBy: Category

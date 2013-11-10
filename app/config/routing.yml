@@ -1,0 +1,4 @@
+acme_jobeet:
+    resource: "@AcmeJobeetBundle/Resources/config/routing.yml"
+    prefix:   /
+

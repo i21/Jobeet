@@ -1,0 +1,3 @@
+AcmeJobeetBundle_job:
+  resource: "@AcmeJobeetBundle/Resources/config/routing/job.yml"
+  prefix: /job
