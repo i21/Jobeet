@@ -222,4 +222,8 @@ class Affiliate
     {
         return $this->Category;
     }
+
+    public function __toString(){
+        return $this->getUrl();
+    }
 }

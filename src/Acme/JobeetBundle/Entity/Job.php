@@ -480,7 +480,10 @@ class Job
     public function prePersistEvent()
     {
         $this->created_at = new \DateTime();
-        $this->updated_at = new \DateTime();
+        if (!$this->getExpiresAt()) {
+            $now = $this->getCreatedAt() ? $this->getCreatedAt()->format('U') : time();
+            $this->expires_at = new \DateTime(date('Y-m-d H:i:s', $now + 86400 * 30));
+        }
  
         return $this;
     }

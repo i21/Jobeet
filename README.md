@@ -1,8 +1,13 @@
 Jobeet
 ======
 
-Tutorial Jobeet de librosweb (Basado en Askeet).  
-La aplicación será una adaptación de Symfony 1.4 a Symfony 2.3  
+Tutorial Jobeet (Basado en Askeet).  
+Aplicación llevada a cabo con a Symfony 2.3.6
+
+Tutorial seguido desde:   
+[IntelligentBee](http://www.intelligentbee.com/blog/tag/symfony2-jobeet/)  
+Symfony2 Jobeet (Inglés)  
+
 
 ---------  
 
@@ -12,8 +17,8 @@ Capitulos
 - [x] 2. El proyecto  
 - [x] 3. El modelo de datos  
 - [x] 4. El controlador y la vista  
-- [ ] 5. El sistema de enrutamiento  
-- [ ] 6. Profundizando en el modelo  
+- [x] 5. El sistema de enrutamiento  
+- [x] 6. Profundizando en el modelo  
 - [ ] 7. Trabajando con la página de cada categoría  
 - [ ] 8. Pruebas unitarias  
 - [ ] 9. Pruebas funcionales  
@@ -38,9 +43,13 @@ Capitulos
 
 Otras fuentes útiles para seguir el tutorial:
 ---------
+[LibrosWeb.es](http://librosweb.es/jobeet_1_4/)  
+Tutorial Jobeet en Symfony 1.6  
 
-[Memorias de un aprendiz](http://www.memoriasdeunaprendiz.com/series/jobeet-con-symfony2/)  
+[Memorias de un aprendiz](http://www.memoriasdeunaprendiz.com/series/jobeet-con-symfony2/)
 Jobeet con symfony 2 (Incompleto: Hasta capitulo 4 / Español)  
 
 [Ens.ro](http://www.ens.ro/2012/03/21/jobeet-tutorial-with-symfony2/)  
-Jobeet tutorial with symfony2 (Incompleto: Hasta capitulo 14 / Inglés)  
+Jobeet tutorial with symfony2 (Inglés)  
+
+ 

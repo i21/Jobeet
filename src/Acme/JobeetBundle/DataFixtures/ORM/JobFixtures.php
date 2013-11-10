@@ -29,7 +29,7 @@ class JobFixtures extends AbstractFixture implements OrderedFixtureInterface{
 		$job1->setIsActivated(true);
 		$job1->setToken('job_sensio_labs');
 		$job1->setEmail('Job@example.com');
-		$job1->setExpiresAt(new \DateTime('2008-10-10'));
+
 
 		$job2 = new Job();
 		$job2->setCategory($this->getReference('design'));
@@ -44,15 +44,50 @@ class JobFixtures extends AbstractFixture implements OrderedFixtureInterface{
 	          et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
 	          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
 	          Duis aute irure dolor in reprehenderit in.");
-		$job2->setHowToApply("Send your resume to fabien.potencier [at] sensio [DOT] com");
+		$job2->setHowToApply("Send your resume to fabien.potenier [at] sensio [DOT] com");
 		$job2->setIsPublic(true);
 		$job2->setIsActivated(true);
 		$job2->setToken('job_extreme_sensio');
 		$job2->setEmail('ob@example.com');
-		$job2->setExpiresAt(new \DateTime('2008-10-10'));
+
+		$job_expired = new Job();
+		$job_expired->setCategory($this->getReference('manager'));
+		$job_expired->setType('full-time');
+		$job_expired->setCompany('Sensio Labs');
+		$job_expired->setLogo('sensio-labs.gif');
+		$job_expired->setUrl('http://www.sensiolabs.com');
+		$job_expired->setPosition('Project Manager');
+		$job_expired->setLocation('Paris, France');
+		$job_expired->setDescription("Lorem ipsum dolor sit amet, consectetur
+	          adipisicing elit...");
+		$job_expired->setHowToApply("Send your resume to mr.manager[AT]sensio[DOT]com");
+		$job_expired->setIsPublic(true);
+		$job_expired->setIsActivated(true);
+		$job_expired->setToken('job_expired');
+		$job_expired->setEmail('job@example.com');
+		$job1->setExpiresAt(new \DateTime('2008-10-10'));
+
+		for($i=100; $i<130; $i++)
+		{
+			$job = new Job();
+	        $job->setCategory($this->getReference('programming'));
+	        $job->setType('full-time');
+	        $job->setCompany('Company '.$i);
+	        $job->setPosition('Web Developer');
+	        $job->setLocation('Paris, France');
+	        $job->setDescription('Lorem ipsum dolor sit amet, consectetur adipisicing elit.');
+	        $job->setHowToApply('Send your resume to lorem.ipsum [at] dolor.sit');
+	        $job->setIsPublic(true);
+	        $job->setIsActivated(true);
+	        $job->setToken('job_'.$i);
+	        $job->setEmail('job@example.com');
+	 
+	        $om->persist($job);
+		}
 
 		$om->persist($job1);
 		$om->persist($job2);
+		$om->persist($job_expired);
 
 		$om->flush();
 	}

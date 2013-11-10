@@ -2,6 +2,7 @@
 Acme\JobeetBundle\Entity\Job:
     type: entity
     table: null
+    repositoryClass: Acme\JobeetBundle\Repository\JobRespository
     fields:
         id:
             type: integer

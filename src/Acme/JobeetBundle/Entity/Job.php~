@@ -2,6 +2,7 @@
 
 namespace Acme\JobeetBundle\Entity;
 
+use Acme\JobeetBundle\Utils\Jobeet as Jobeet;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -479,7 +480,10 @@ class Job
     public function prePersistEvent()
     {
         $this->created_at = new \DateTime();
-        $this->updated_at = new \DateTime();
+        if (!$this->getExpiresAt()) {
+            $now = $this->getCreatedAt() ? $this->getCreatedAt()->format('U') : time();
+            $this->expires_at = new \DateTime(date('Y-m-d H:i:s', $now + 86400 * 30));
+        }
  
         return $this;
     }
@@ -493,4 +497,25 @@ class Job
  
         return $this;
     }
+
+    public function __toString(){
+        return sprintf('%s at %s (%s)', $this->getPosition(),
+            $this->getCompany(), $this->getLocation());
+    }
+
+    public function getCompanySlug()
+    {
+        return Jobeet::slugify($this->getCompany());
+    }
+
+    public function getPositionSlug()
+    {
+        return Jobeet::slugify($this->getPosition());
+    }
+
+    public function getLocationSlug()
+    {
+        return Jobeet::slugify($this->getLocation());
+    }
+
 }
