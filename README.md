@@ -5,7 +5,7 @@ Tutorial Jobeet (Basado en Askeet).
 Aplicación llevada a cabo con a Symfony 2.3.6
 
 Tutorial seguido desde:   
-[IntelligentBee](http://www.intelligentbee.com/blog/tag/symfony2-jobeet/)  
+[IntelligentBee](http://www.intelligentbee.com/blog/tag/symfony2-jobeet/) 
 Symfony2 Jobeet (Inglés)  
 
 
@@ -19,9 +19,9 @@ Capitulos
 - [x] 4. El controlador y la vista  
 - [x] 5. El sistema de enrutamiento  
 - [x] 6. Profundizando en el modelo  
-- [ ] 7. Trabajando con la página de cada categoría  
-- [ ] 8. Pruebas unitarias  
-- [ ] 9. Pruebas funcionales  
+- [x] 7. Trabajando con la página de cada categoría  
+- [x] 8. Pruebas unitarias  
+- [x] 9. Pruebas funcionales  
 - [ ] 10. Los formularios  
 - [ ] 11. Probando los formularios  
 - [ ] 12. El generador de la parte de administración  
@@ -37,19 +37,21 @@ Capitulos
 - [ ] 22. La cache  
 - [ ] 23. Pasando a producción  
 - [ ] 24. Un repaso a Symfony  
+   
+   
 ---------
 
---------
+---------
 
 Otras fuentes útiles para seguir el tutorial:
 ---------
-[LibrosWeb.es](http://librosweb.es/jobeet_1_4/)  
+[LibrosWeb.es](http://librosweb.es/jobeet_1_4/) 
 Tutorial Jobeet en Symfony 1.6  
 
 [Memorias de un aprendiz](http://www.memoriasdeunaprendiz.com/series/jobeet-con-symfony2/)
 Jobeet con symfony 2 (Incompleto: Hasta capitulo 4 / Español)  
 
-[Ens.ro](http://www.ens.ro/2012/03/21/jobeet-tutorial-with-symfony2/)  
+[Ens.ro](http://www.ens.ro/2012/03/21/jobeet-tutorial-with-symfony2/) 
 Jobeet tutorial with symfony2 (Inglés)  
 
  

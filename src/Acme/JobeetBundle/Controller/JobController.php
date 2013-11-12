@@ -37,9 +37,13 @@ class JobController extends Controller
             ->getWithJobs();
 
         foreach($categories as $category) {
-            $category->setActiveJobs($em->getRepository(
-                'AcmeJobeetBundle:Job')->getActiveJobs($category->getId(), 
+            $category->setActiveJobs($em->getRepository('AcmeJobeetBundle:Job')
+                ->getActiveJobs($category->getId(), 
                 $this->container->getParameter('max_jobs_on_homepage')));
+
+            $category->setMoreJobs($em->getRepository('AcmeJobeetBundle:Job')
+                ->countActiveJobs($category->getId()) - $this->container
+                ->getParameter('max_jobs_on_homepage'));
         }
 
         return $this->render('AcmeJobeetBundle:Job:index.html.twig', array(

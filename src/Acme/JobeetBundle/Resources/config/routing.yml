@@ -5,3 +5,7 @@ AcmeJobeetBundle_job:
 AcmeJobeetBundle_homepage:
   pattern: /
   defaults: { _controller: AcmeJobeetBundle:Job:index }
+
+AcmeJobeetBundle_category:
+  pattern: /category/{slug}/{page}
+  defaults: { _controller: AcmeJobeetBundle:Category:show, page:1 }
