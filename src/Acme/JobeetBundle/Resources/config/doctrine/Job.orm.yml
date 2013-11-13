@@ -73,5 +73,8 @@ Acme\JobeetBundle\Entity\Job:
                     nullable: false
                     onDelete: CASCADE
     lifecycleCallbacks:
-         prePersist: [ prePersistEvent ]
-         preUpdate: [ preUpdateEvent ]
+         prePersist: [ setTokenValue, preUpload, prePersistEvent ]
+         preUpdate: [ preUpload, preUpdateEvent ]
+         postPersist: [ upload ]
+         postUpdate: [ upload ]
+         postRemove: [ removeUpload ]

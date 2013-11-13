@@ -1,0 +1,24 @@
+Acme\JobeetBundle\Entity\Job:
+    properties:
+        email:
+            - NotBlank: ~
+            - Email: ~
+        type:
+            - NotBlank: ~
+            - Choice: { callback: getTypeValues }
+        Category:
+            - NotBlank: ~
+        company:
+            - NotBlank: ~
+        position:
+            - NotBlank: ~
+        location:
+            - NotBlank: ~
+        description:
+            - NotBlank: ~
+        how_to_apply:
+            - NotBlank: ~
+        url:
+            - Url: ~
+        file:
+            - Image: ~

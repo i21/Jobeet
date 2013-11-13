@@ -12,6 +12,12 @@ job_show:
     requirements:
         id: \d+
 
+job_preview:
+    pattern: /{company}/{location}/{token}/{position}
+    defaults: { _controller: "AcmeJobeetBundle:Job:preview" }
+    requirements:
+        token: \w+
+
 job_new:
     pattern:  /new
     defaults: { _controller: "AcmeJobeetBundle:Job:new" }
@@ -22,15 +28,20 @@ job_create:
     requirements: { _method: post }
 
 job_edit:
-    pattern:  /{id}/edit
+    pattern:  /{token}/edit
     defaults: { _controller: "AcmeJobeetBundle:Job:edit" }
 
 job_update:
-    pattern:  /{id}/update
+    pattern:  /{token}/update
     defaults: { _controller: "AcmeJobeetBundle:Job:update" }
     requirements: { _method: post|put }
 
 job_delete:
-    pattern:  /{id}/delete
+    pattern:  /{token}/delete
     defaults: { _controller: "AcmeJobeetBundle:Job:delete" }
     requirements: { _method: post|delete }
+
+job_publish:
+    pattern: /{token}/job_publish
+    defaults: { _controller: "AcmeJobeetBundle:Job:publish "}
+    requirements: { _method: post }

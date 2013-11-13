@@ -22,7 +22,7 @@ Capitulos
 - [x] 7. Trabajando con la página de cada categoría  
 - [x] 8. Pruebas unitarias  
 - [x] 9. Pruebas funcionales  
-- [ ] 10. Los formularios  
+- [x] 10. Los formularios  
 - [ ] 11. Probando los formularios  
 - [ ] 12. El generador de la parte de administración  
 - [ ] 13. El usuario  
