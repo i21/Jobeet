@@ -25,10 +25,10 @@ Capitulos
 - [x] 10. Los formularios  
 - [x] 11. Probando los formularios  
 - [x] 12. El generador de la parte de administración  
-- [ ] 13. El usuario  
-- [ ] 14. El día de descanso  
-- [ ] 15. Canales Atom  
-- [ ] 16. Servicios web  
+- [x] 13. La seguridad    
+- [ ] 14. Canales Atom  
+- [ ] 15. Servicios web  
+- [ ] 16. El mailer  
 - [ ] 17. El buscador  
 - [ ] 18. AJAX  
 - [ ] 19. Internacionalización y localización  

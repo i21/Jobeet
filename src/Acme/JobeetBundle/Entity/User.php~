@@ -1,0 +1,12 @@
+<?php
+
+namespace Acme\JobeetBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * User
+ */
+class User
+{
+    }
