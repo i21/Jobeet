@@ -45,3 +45,8 @@ job_publish:
     pattern: /{token}/job_publish
     defaults: { _controller: "AcmeJobeetBundle:Job:publish "}
     requirements: { _method: post }
+
+job_extend:
+    pattern: /{token}/job_extend
+    defaults: { _controller: "AcmeJobeetBundle:Job:extend" }
+    requirements: { _method: post }

@@ -23,7 +23,7 @@ Capitulos
 - [x] 8. Pruebas unitarias  
 - [x] 9. Pruebas funcionales  
 - [x] 10. Los formularios  
-- [ ] 11. Probando los formularios  
+- [x] 11. Probando los formularios  
 - [ ] 12. El generador de la parte de administración  
 - [ ] 13. El usuario  
 - [ ] 14. El día de descanso  

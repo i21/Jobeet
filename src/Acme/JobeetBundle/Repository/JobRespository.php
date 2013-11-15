@@ -81,4 +81,17 @@ class JobRespository extends EntityRepository
 
 		return $query->getSingleScalarResult();
 	}
+
+	public function cleanup($days)
+	{
+		$query = $this->createQueryBuilder('j')
+					  ->delete()
+					  ->where('j.is_activated IS NULL')
+					  ->andWhere('j.created_at < :created_at')
+					  ->setParameter('created_at', date('Y-m-d', time() - 86400 * $days))
+					  ->setQuery();
+
+		return $query->execute();
+
+	}
 }

@@ -14,3 +14,4 @@ app/config/parameters.yml
 
 # Misc
 php.bat
+composer.phar
