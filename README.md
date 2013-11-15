@@ -24,7 +24,7 @@ Capitulos
 - [x] 9. Pruebas funcionales  
 - [x] 10. Los formularios  
 - [x] 11. Probando los formularios  
-- [ ] 12. El generador de la parte de administración  
+- [x] 12. El generador de la parte de administración  
 - [ ] 13. El usuario  
 - [ ] 14. El día de descanso  
 - [ ] 15. Canales Atom  

@@ -338,7 +338,7 @@ class JobController extends Controller
             $entity = $em->getRepository('AcmeJobeetBundle:Job')->findOneByToken($token);
 
             if (!$entity) {
-                throw $this->createNewFoundException('Unable to find job entity.')
+                throw $this->createNewFoundException('Unable to find job entity.');
             }
 
             if(!$entity->extend()) {

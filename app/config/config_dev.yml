@@ -1,4 +1,5 @@
 imports:
+    - { resource: parameters-test.yml }
     - { resource: config.yml }
 
 framework:
