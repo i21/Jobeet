@@ -26,7 +26,7 @@ Capitulos
 - [x] 11. Probando los formularios  
 - [x] 12. El generador de la parte de administración  
 - [x] 13. La seguridad    
-- [ ] 14. Canales Atom  
+- [x] 14. Canales Atom  
 - [ ] 15. Servicios web  
 - [ ] 16. El mailer  
 - [ ] 17. El buscador  

@@ -33,6 +33,8 @@ class JobController extends Controller
 
         //$entities = $em->getRepository('AcmeJobeetBundle:Job')->getActiveJobs();
 
+        $format = $this->getRequest()->getRequestFormat();
+
         $categories = $em->getRepository('AcmeJobeetBundle:Category')
             ->getWithJobs();
 
@@ -46,8 +48,17 @@ class JobController extends Controller
                 ->getParameter('max_jobs_on_homepage'));
         }
 
-        return $this->render('AcmeJobeetBundle:Job:index.html.twig', array(
+        if($latestJob) {
+            $lastUpdated = $latestJob->getCreatedAt()->format(DATE_ATOM);
+        } else {
+            $lastUpdated = new \DateTime();
+            $lastUpdated = $lastUpdated->format(DATE_ATOM);
+        }
+
+        return $this->render('AcmeJobeetBundle:Job:index.'.$format.'.twig', array(
             'categories' => $categories,
+            'lastUpdated' => $lastUpdated,
+            'feedId' => sha1($this->get('router')->generate('job',array('_format'=>'atom'), true))
         ));
     }
     /**

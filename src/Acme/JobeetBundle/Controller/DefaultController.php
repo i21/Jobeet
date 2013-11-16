@@ -9,7 +9,8 @@ class DefaultController extends Controller
 {
     public function indexAction($name)
     {
-        return $this->render('AcmeJobeetBundle:Default:index.html.twig', array('name' => $name));
+        $format = $this->getRequest()->getRequestFormat();
+        return $this->render('AcmeJobeetBundle:Default:index.'.$format.'.twig', array('name' => $name));
     }
 
     public function loginAction(){
